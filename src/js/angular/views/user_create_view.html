@@ -1,0 +1,75 @@
+<div class="section navigation-section" >
+
+    <div id="user_form">
+
+        <!--message-->
+        <div class="toast" id="message" style="display: none;">
+            <label class="toast-label" id="messageText"></label>
+            <button class="button flat color-yellow-500" onclick="this.parentElement.style.display='none'">OK</button>
+        </div>
+
+        <div class="switch">
+            <input type="checkbox" id="admin_switch"/>
+            <label for="admin_switch">   Администратор</label>
+        </div> <br><br>
+        <div class="switch">
+            <input type="checkbox" id="blocked_switch"/>
+            <label for="blocked_switch">   Заблокирован</label>
+        </div> <br><br>
+
+        <div class="text-input-container">
+            <label>Логин *</label> <br>
+            <input type="text" class="text-input border-green-500" placeholder="" id="login">
+        </div> <br><br>
+
+        <div class="text-input-container">
+            <label>Пароль *</label> <br>
+            <input type="password" class="text-input border-green-500" placeholder="" id="password"/>
+        </div> <br><br>
+
+        <div class="text-input-container">
+            <label>Имя *</label> <br>
+            <input type="text" class="text-input border-green-500" placeholder="" id="name"/>
+        </div> <br><br>
+
+        <div class="text-input-container">
+            <label>Фамилия</label> <br>
+            <input type="text" class="text-input border-green-500" placeholder="" id="lastname"/>
+        </div> <br><br>
+
+        <div class="text-input-container">
+            <label>Отчество</label> <br>
+            <input type="text" class="text-input border-green-500" placeholder="" id="name2"/>
+        </div> <br><br>
+
+
+        <!--<h2>Адресные данные</h2>-->
+        <!--<button class="button raised children">Добавить</button> <br><br>-->
+
+        <!--<ul class="list" ng-repeat="contact in user_data.contacts">-->
+            <!--<li ripple  id="{{ 'contact_' + contact.id }}" ng-click="">-->
+                <!--<img class="item-icon" src="img/contact.png"/>-->
+                <!--<span class="item-text">-->
+                    <!--<active ng-if="contact.activity==true">✔</active>-->
+                    <!--<active ng-if="contact.activity==false">✘</active>-->
+                        <!--{{ contact.account_type }}-->
+                    <!--<span class="secondary-text">-->
+                        <!--{{ contact.full_adress }}-->
+                    <!--</span>-->
+                <!--</span>-->
+
+                <!--<i class="icon-delete item-action" ng-click="$event.stopPropagation(); OnDelAction(action.id)"></i>-->
+                <!--<li class="divider" ng-if="$index !== user_data.contacts.length - 1"></li>-->
+            <!--</li>-->
+        <!--</ul>-->
+
+    </div>
+
+    <!--fab-->
+    <button id="user_fab" class="fab bg-green-500 color-white large custom-fab-center" >
+        <i class="icon-save" ng-click="create_user()"></i>
+    </button>
+
+</div>
+
+

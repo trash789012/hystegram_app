@@ -1,0 +1,91 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/material.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>CRM Hysterical</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!--<meta name="description" content="Material Framework is an easy to use Material Design Framework for the web.">-->
+
+</head>
+<body class="tablet dark-theme" ng-app="hystegramApp" ng-controller="rootController" id="bodyMain">
+<!--side-menu-->
+    <div class="sidemenu sidebar responsive" id="main-side-menu" hidden>
+        <div class="sidemenu-hero fade">
+            <img class="avatar" src="img/avatar.jpg"/>
+            <!--<img class="sidemenu-hero-image" src="img/menu.jpg"/>-->
+            <span class="title">Hystegram</span>
+            <span class="text"><a>official@hysterical.ru</a></span>
+        </div>
+        <ul class="menu">
+            <h2 class="subheading">Функции</h2>
+            <li ripple> <a href="#/users"> <i class="icon-account-circle"></i>Участники</a></li>
+            <li ripple> <a href="#/actions"> <i class="icon-list"></i>События</a></li>
+            <li ripple> <a href="#/config"> <i class="icon-settings"></i>Настройки</a></li>
+
+            <li class="divider"></li>
+            <li ripple><a href="#/about"><i class="icon-info-outline"></i>About</a></li>
+        </ul>
+    </div>
+
+<!--content-->
+
+    <div class="main-content">
+        <div class="toolbar header header-fixed bg-purple-900 color-white">
+            <button class="icon-button" onclick="side_onclick()">
+                <i class="icon-menu"></i>
+            </button>
+            <label class="toolbar-label">Hystegram</label>
+
+
+            <!--<button class="icon-button float-right" onclick="goToSettings()">-->
+                <!--<i class="icon-settings"></i>-->
+            <!--</button>-->
+            <button class="icon-button float-right" onclick="signIn()">
+                <i class="icon-person-location"></i>
+            </button>
+
+        </div>
+
+        <ng-view></ng-view>
+
+<!--preloader-->
+        <div class="loadcss custom-loader" id="preloader" hidden></div>
+    </div>
+
+
+
+<!--jquery-->
+    <script src="js/jquery/jquery-3.3.1.js"></script>
+    <script src="js/jquery/jquery.touchSwipe.min.js"></script>
+    <script src="js/jquery/jquerycookie.js"></script>
+<!--material-->
+    <script src="js/material_design/material.js"></script>
+
+<!--angular-->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>-->
+    <script src="js/angular/angular.min.js"></script>
+    <script src="js/angular/angular-route.min.js"></script>
+    <script src="js/angular/application/app.js"></script>
+    <script src="js/angular/controllers/rootController.js"></script>
+    <script src="js/angular/controllers/MainController.js"></script>
+    <!--<script src="js/angular/controllers/AuthController.js"></script>-->
+    <script src="js/angular/controllers/AboutController.js"></script>
+    <script src="js/angular/controllers/ActionDetailController.js"></script>
+    <script src="js/angular/controllers/ActionCreateController.js"></script>
+    <script src="js/angular/controllers/UsersMainController.js"></script>
+    <script src="js/angular/controllers/UserDetailController.js"></script>
+    <script src="js/angular/controllers/UserCreateController.js"></script>
+    <script src="js/angular/controllers/ContactDetailController.js"></script>
+    <script src="js/angular/controllers/ContactCreateController.js"></script>
+    <script src="js/angular/controllers/SignInController.js"></script>
+    <script src="js/angular/controllers/UserConfigController.js"></script>
+    <script src="js/angular/config/routes.js"></script>
+
+<!--custom-->
+    <script src="js/custom_functions/slide.js"></script>
+    <script src="js/custom_functions/side_click_all_buttons.js"></script>
+    <script src="js/custom_functions/custom_func.js"></script>
+
+</body>
+</html>

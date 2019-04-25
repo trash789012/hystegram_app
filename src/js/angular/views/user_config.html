@@ -1,0 +1,19 @@
+<div class="section navigation-section" >
+    <div class="switch">
+        <input type="checkbox" id="theme_cb" ng-model="isChecked" ng-change="ChangeTheme()"/>
+        <label for="theme_cb">   Тёмная тема</label>
+    </div>
+
+    <!--message-->
+    <div class="toast" id="message" style="display: none;">
+        <label class="toast-label" id="messageText"></label>
+        <button class="button flat color-yellow-500" onclick="this.parentElement.style.display='none'">OK</button>
+    </div>
+
+    <!--fab-->
+    <button class="fab bg-green-500 color-white large custom-fab-center">
+        <i class="icon-save" ng-click="saveUserConfig()"></i>
+    </button>
+</div>
+
+

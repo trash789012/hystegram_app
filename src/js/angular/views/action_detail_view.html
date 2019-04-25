@@ -1,0 +1,40 @@
+<div class="section navigation-section">
+    <!--<p >Просмотр события {{ action_id }} </p>-->
+
+    <div id="action_form" hidden>
+        <div class="text-input-container">
+            <label>Описание</label> <br>
+            <input type="text" class="text-input border-green-500" placeholder="" id="comment"
+                   value="{{ action_data.comment }}"/>
+        </div> <br><br>
+
+        <div class="text-input-container">
+            <label>Дата</label> <br>
+            <input type="date" class="text-input border-green-500" placeholder="date" id="day"
+                   value="{{ action_data.day }}"/>
+        </div> <br><br>
+
+        <div class="text-input-container">
+            <label>Время</label> <br>
+            <input type="time" class="text-input border-green-500" placeholder="time" id="time"
+                   value="{{ action_data.time }}"/>
+        </div>
+
+        <!--message-->
+        <div class="toast" id="message" style="display: none;">
+            <label class="toast-label" id="messageText"></label>
+            <button class="button flat color-yellow-500" onclick="this.parentElement.style.display='none'">OK</button>
+        </div>
+
+    </div>
+
+    <!--fab-->
+    <button id="action_fab" class="fab bg-green-500 color-white large custom-fab-center" style="display: none;">
+        <i class="icon-save" ng-click="save_action()"></i>
+    </button>
+
+
+
+</div>
+
+

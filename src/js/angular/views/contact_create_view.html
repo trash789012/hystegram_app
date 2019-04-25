@@ -1,0 +1,32 @@
+<div class="section navigation-section" >
+    <div id="contact_form">
+
+        <!--message-->
+        <div class="toast" id="message" style="display: none;">
+            <label class="toast-label" id="messageText"></label>
+            <button class="button flat color-yellow-500" onclick="this.parentElement.style.display='none'">OK</button>
+        </div>
+
+        <div class="switch">
+            <input type="checkbox" id="activity_switch" checked/>
+            <label for="activity_switch">   Активно</label>
+        </div> <br><br>
+
+        <select class="dropdown-menu" id="view_acc">
+            <option ng-repeat="type in contact_types.result">{{ type.type }}</option>
+        </select> <br><br>
+
+        <div class="text-input-container">
+            <label>Адрес</label> <br>
+            <input type="text" class="text-input border-green-500" placeholder="" id="full_adress"/>
+        </div> <br><br>
+
+    </div>
+
+    <!--fab-->
+    <button id="contact_fab" class="fab bg-green-500 color-white large custom-fab-center" >
+        <i class="icon-save" ng-click="CreateContact();"></i>
+    </button>
+</div>
+
+

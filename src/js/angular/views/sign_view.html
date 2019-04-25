@@ -1,0 +1,26 @@
+<div class="section navigation-section" >
+
+    <div id="sign_form">
+        <label id="auth_lbl">Вы авторизованы, как {{ getLogin() }}</label>
+
+        <div class="text-input-container" id="login_div">
+            <label id="login_lbl">Логин</label> <br>
+            <input type="text" class="text-input border-green-500" placeholder="" id="login"/>
+        </div> <br><br>
+
+        <div class="text-input-container" id="pass_div">
+            <label id="pass_lbl">Пароль</label> <br>
+            <input type="password" class="text-input border-green-500" placeholder="" id="pass"/>
+        </div> <br><br>
+
+        <button class="button raised" ng-click="logOut()" id="logOutBtn">Logout</button>
+        <button class="button raised" ng-click="auth()" id="logBtn">Login</button>
+    </div>
+
+    <!--fab-->
+    <!--<button class="fab bg-green-500 color-white large custom-fab-center">-->
+        <!--<i class="icon-add" ng-click="add_action()"></i>-->
+    <!--</button>-->
+</div>
+
+

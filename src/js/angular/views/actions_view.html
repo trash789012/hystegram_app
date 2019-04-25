@@ -1,0 +1,28 @@
+<!--content-->
+<div class="section navigation-section" >
+    <ul class="list" ng-repeat="action in actions.result">
+            <li ripple  id="{{ 'action_' + action.id }}" ng-click="actionDetail(action.id);">
+                <img class="item-icon" src="img/event.png"/>
+                   <span class="item-text">
+                       {{ action.comment }}
+                        <span class="secondary-text">
+                            {{ action.day + " в " + action.time + " (" + GetDayName(action.day) + ")" }}
+                        </span>
+                    </span>
+
+                <i class="icon-delete item-action" ng-click="$event.stopPropagation(); OnDelAction(action.id)"></i>
+                <li class="divider" ng-if="$index !== actions.result.length - 1"></li>
+            </li>
+            <!--<div ng-if="$index !== actions.result.length - 1">-->
+                <!--<li class="divider" ng-if="$index !== actions.result.length - 1"></li>-->
+            <!--</div>-->
+    </ul>
+
+    <!--fab-->
+    <button class="fab bg-green-500 color-white large custom-fab-center">
+        <i class="icon-add" ng-click="add_action()"></i>
+    </button>
+</div>
+
+
+

@@ -1,0 +1,28 @@
+<!--content-->
+<div class="section navigation-section" >
+    <ul class="list" ng-repeat="user in users.result">
+        <li ripple id="{{ 'user_' + user.id }}" ng-click="userDetail(user.id);" >
+
+            <img class="item-icon" src="img/user_ava.png"/>
+            <span class="item-text">
+                       {{ user.name + " " + user.lastname }}
+                        <span class="secondary-text ">
+                            <admin ng-if="user.admin==true" class="color-white" > ♔ </admin>
+                            <blocked ng-if="user.blocked==true" class="color-white"> ø </blocked>
+                            <!--{{ action.day + " в " + action.time }}-->
+                        </span>
+                    </span>
+
+            <i class="icon-delete item-action small" ng-click="$event.stopPropagation(); OnDelUser(user.id, user.user)"></i>
+                <li class="divider" ng-if="$index !== users.result.length - 1"></li>
+        </li>
+    </ul>
+
+    <!--fab-->
+    <button class="fab bg-green-500 color-white large custom-fab-center">
+        <i class="icon-add" ng-click="create_new_user()"></i>
+    </button>
+</div>
+
+
+
