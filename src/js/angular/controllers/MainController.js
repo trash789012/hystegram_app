@@ -47,16 +47,19 @@ app.controller('MainController', [ '$scope', function ($scope) {
 
     $scope.actionDetail = function (id) {
         window.location = '#/actionDetail/' + id;
-    }
+    };
 
     $scope.add_action = function () {
         window.location = '#/actionCreate';
-    }
+    };
 
+    /**
+     * @return {string}
+     */
     $scope.GetDayName = function (date) {
-        var days = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'];
+        let days = ['вскр', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'];
 
-        var day = new Date(date.substr(6,4), date.substr(3,2) - 1, date.substr(0,2)).getDay();
+        let day = new Date(date.substr(6,4), date.substr(3,2) - 1, date.substr(0,2)).getDay();
 
         return days[day];
     }
