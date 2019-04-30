@@ -79,14 +79,10 @@ function PrepareUrl(url) {
 }
 
 function isAuth() {
-    var login = GetCookie(COOKIE_LOGIN);
-    var pass = GetCookie(COOKIE_PASS);
+    let login = GetCookie(COOKIE_LOGIN);
+    let pass = GetCookie(COOKIE_PASS);
 
-    if (login !== "" && pass !== "") {
-        return true;
-    } else {
-        return false;
-    }
+    return login !== "" && pass !== "";
 }
 
 function setAuthCookies(log, pass) {
